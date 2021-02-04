@@ -1,2 +1,6 @@
-APIConfig.class
-ZooCheb.class
+CounterManager\AnimalManager.class
+Resources\Animals.class
+Resources\AnimalsResources.class
+Resources\APIConfig.class
+CounterManager\CounterManager.class
+Resources\ZooCheb.class

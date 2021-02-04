@@ -1,3 +1,5 @@
+package Resources;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -11,10 +13,16 @@ public class ZooCheb {
 
     @GET
     public Response animalsGet(@QueryParam("getAnimal") int id) {
-        if (id < 0) {
-            return Response.ok(baghdad).build();
+        if (id <= baghdad.size()) {
+            if (id == 0) {
+                return Response.ok(baghdad).build();
+            } else {
+                return Response.ok(baghdad.get(id)).build();
+            }
+        } else {
+            return Response.status(Response.Status.NOT_FOUND).build();
         }
-        return Response.ok(baghdad.get(id)).build();
+
     }
 
     @POST
